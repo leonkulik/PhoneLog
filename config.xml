@@ -15,6 +15,7 @@
     <feature name="NetworkStatus">
         <param name="android-package" value="org.apache.cordova.NetworkManager" />
         <param name="ios-package" value="CDVConnection" />
+        <param name="blackberry-package" value="org.apache.cordova.network.Network" />
     </feature>
     <!-- Compass -->
     <feature name="Compass">
@@ -30,6 +31,15 @@
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.Device" />
     </feature>
+    <feature id="blackberry.app" required="true" version="1.0.0.0" />
+    <rim:permissions>
+        <rim:permit>read_device_identifying_information</rim:permit>
+    </rim:permissions>
+    <Capabilities>
+        <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+        <Capability Name="ID_CAP_IDENTITY_DEVICE" />
+        <Capability Name="ID_CAP_IDENTITY_USER" />
+    </Capabilities>
     <!-- Notification -->
     <feature name="Notification">
         <param name="android-package" value="org.apache.cordova.Notification" />
@@ -40,4 +50,14 @@
         <param name="android-package" value="org.apache.cordova.SplashScreen" />
         <param name="ios-package" value="CDVSplashScreen" />
     </feature>
+    <!--Geolocation-->
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.GeoBroker" />
+        <param name="blackberry-package" value="org.apache.cordova.geolocation.Geolocation" />
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
+    <Capabilities>
+        <Capability Name="ID_CAP_NETWORKING" />
+        <Capability Name="ID_CAP_LOCATION" />
+    </Capabilities>
 </widget>
