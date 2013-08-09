@@ -1,8 +1,8 @@
-/*globals $, navigator, window, document, device, connection */
+/*globals $, navigator, window, document, alert, position, watch_id, device, connection */
 $(function () {
     'use strict';
 
-    var func_interval, conn, pos;
+    var func_interval, conn, position, watch_id;
     
     function notifyUser(text) {
     /* Display an annoying Alert :) */
@@ -10,7 +10,8 @@ $(function () {
     }
     
     function onDeviceReady() {
-    /* Annoy user that all's set */
+    /* Annoy user that's all set */
+        position = navigator.geolocation.getCurrentPosition;
         notifyUser('Good to go!');
     }
     
@@ -23,29 +24,33 @@ $(function () {
     }
     
     function getConnectionType() {
-//        var quality, Connection, states = {};
         var quality = navigator.connection.type;
-        alert(quality);
         notifyUser(quality);
     }
     
-    function getPosition() {
-    /* Track GPS */
-        pos = navigator.geolocation.getCurrentPosition;
-        alert(pos.timestamp + pos.coords.latitude + ' : ' + pos.coords.longitude);
-        notifyUser(pos.timestamp + pos.coords.latitude + ' : ' + pos.coords.longitude);
+    function getPosition(position) {
+    /* GPS Track */
+        watch_id = navigator.geolocation.watchPosition(
+            alert(position.timestamp + position.coords.latitude + ' : ' + position.coords.longitude),
+            alert("Erro"),
+            {frequency: 3000, enableHighAccuracy: true }
+        );
     }
     
-    function writeStuff() {
+    function writeStuff(position) {
     /* Show stuff on screen */
         var quality;
         quality = navigator.connection.type;
         $("#log").append('<br> Quality: ' + quality);
-        pos = navigator.geolocation.getCurrentPosition;
-        $("#log").append(pos.timestamp +
-            'Latitude: ' + pos.coords.latitude +
-            'Longitude: ' + pos.coords.longitude +
-            'Accuracy: ' + pos.coords.accuracy);
+        
+        watch_id = navigator.geolocation.getCurrentPosition(
+            $("#log").append(position.timestamp +
+                'Latitude: ' + position.coords.latitude +
+                'Longitude: ' + position.coords.longitude +
+                'Accuracy: ' + position.coords.accuracy),
+            alert("Erro"),
+            { enableHighAccuracy: true }
+        );
     }
     
     function startTrackStuff() {

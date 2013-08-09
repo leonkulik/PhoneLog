@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.dwb.app" version="0.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.dwb.app" version="0.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Phone Log</name>
     <description>
-        Sample Phonegap App for study. Just log and show on screen all device data, GPS position, Timestamp and Internet Quality Connection. (v0.1)
+        Sample Phonegap App for study. Just log and show on screen all device data, GPS position, Timestamp and Internet Quality Connection. (v0.1.1)
     </description>
     <author email="contato@dwb.com.br" href="http://dwb.com.br">
         Leon Kulikowski
