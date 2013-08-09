@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.dwb.app" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Cell Phone Logger</name>
+    <description>
+        Aplicativo de demonstração da tecnologia Phonegap. Faz um log, na tela, com os dados de seu Aparelho, posição GPS, Data e qualidade de conexão da Internet.
+    </description>
+    <author email="contato@dwb.com.br" href="http://dwb.com.br">
+        Leon Kulikowski
+    </author>
+    <access origin="*" />
+    <icon src="icon.png" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="false" />
+    <!-- Connection -->
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.NetworkManager" />
+        <param name="ios-package" value="CDVConnection" />
+    </feature>
+    <!-- Compass -->
+    <feature name="Compass">
+        <param name="android-package" value="org.apache.cordova.CompassListener" />
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
+    <!-- Accelerometer -->
+    <feature name="Accelerometer">
+        <param name="android-package" value="org.apache.cordova.AccelListener" />
+        <param name="ios-package" value="CDVAccelerometer" />
+    </feature>
+    <!-- Device -->
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.Device" />
+    </feature>
+    <!-- Notification -->
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.Notification" />
+        <param name="ios-package" value="CDVNotification" />
+    </feature>
+    <!--SplashScreen-->
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.SplashScreen" />
+        <param name="ios-package" value="CDVSplashScreen" />
+    </feature>
+</widget>
