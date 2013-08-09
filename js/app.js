@@ -2,7 +2,7 @@
 $(function () {
     'use strict';
 
-    var gogogo;
+    var func_interval, conn, pos;
     
     function notifyUser(text) {
     /* Display an annoying Alert :) */
@@ -22,7 +22,7 @@ $(function () {
             'Device Version: '  + device.version;
     }
     
-    function getConnectionType(conn) {
+    function getConnectionType() {
         var quality, Connection, states = {};
         quality = navigator.connection.type;
         states[Connection.UNKNOWN]  = 'Unknown connection';
@@ -36,22 +36,16 @@ $(function () {
         conn = states[quality];
     }
     
-    function getPosition(pos) {
+    function getPosition() {
     /* Track GPS */
         pos = navigator.geolocation.getCurrentPosition;
-//        window.localStorage.setItem(position.timestamp ,  
-//            'Latitude: ' + position.coords.latitude + 
-//            'Longitude: ' + position.coords.longitude +
-//            'Accuracy: ' + position.coords.accuracy +
-//            'Quality: ' + states[quality]);
     }
     
     function writeStuff() {
-    /* Write all stuff on Local Storage and screen */
-        var conn, pos;
-        getConnectionType(conn);
+    /* Show stuff on screen */
+        getConnectionType();
         $("#log").append('<br> Quality: ' + conn);
-        getPosition(pos);
+        getPosition();
         $("#log").append(pos.timestamp +
             'Latitude: ' + pos.coords.latitude +
             'Longitude: ' + pos.coords.longitude +
@@ -60,14 +54,14 @@ $(function () {
     
     function startTrackStuff() {
     /* Repeat the writing function every 5 sec */
-        gogogo = window.setInterval(writeStuff, 2000);
+        func_interval = window.setInterval(writeStuff, 2000);
         getPhoneInfo();
         $("#msg").html("Tracking...");
     }
     
     function stopTrackStuff() {
     /* Stops the writing function */
-        window.clearInterval(gogogo);
+        window.clearInterval(func_interval);
         $("#msg").html("Stooooped !!");
     }
     
@@ -75,18 +69,18 @@ $(function () {
     // Clean the Local Storage
         window.localStorage.clear();
         $("#log").html("");
-        window.clearInterval(gogogo);
+        window.clearInterval(func_interval);
     }
     
     function checkConnection() {
         var conn = null;
-        getConnectionType(conn);
+        getConnectionType();
         notifyUser(conn);
     }
     
     function checkGeolocation() {
         var pos = null;
-        getPosition(pos);
+        getPosition();
         notifyUser(pos);
     }
         

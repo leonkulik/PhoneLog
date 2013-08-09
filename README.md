@@ -1,6 +1,6 @@
 PhoneLog
 ========
 
-Sample Phonegap App
+Sample Phonegap App created during Phonegap Training
 
-Sample created for the Phonegap Training
+Sample Phonegap App for study. Just log and show on screen all device data, GPS position, Timestamp and Internet Quality Connection.
