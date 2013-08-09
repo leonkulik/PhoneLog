@@ -6,7 +6,7 @@ $(function () {
     
     function notifyUser(text) {
     /* Display an annoying Alert :) */
-        navigator.notification.alert(text, false, '¡ Lovely pop-up !', 'Done');
+        navigator.notification.alert(text, false, '¡Lovely pop-up!', 'Done');
     }
     
     function onDeviceReady() {
@@ -23,29 +23,25 @@ $(function () {
     }
     
     function getConnectionType() {
-        var quality, Connection, states = {};
-        quality = navigator.connection.type;
-        states[Connection.UNKNOWN]  = 'Unknown connection';
-        states[Connection.ETHERNET] = 'Ethernet connection';
-        states[Connection.WIFI]     = 'WiFi connection';
-        states[Connection.CELL_2G]  = 'Cell 2G connection';
-        states[Connection.CELL_3G]  = 'Cell 3G connection';
-        states[Connection.CELL_4G]  = 'Cell 4G connection';
-        states[Connection.CELL]     = 'Cell generic connection';
-        states[Connection.NONE]     = 'No network connection';
-        conn = states[quality];
+//        var quality, Connection, states = {};
+        var quality = navigator.connection.type;
+        alert(quality);
+        notifyUser(quality);
     }
     
     function getPosition() {
     /* Track GPS */
         pos = navigator.geolocation.getCurrentPosition;
+        alert(pos.timestamp + pos.coords.latitude + ' : ' + pos.coords.longitude);
+        notifyUser(pos.timestamp + pos.coords.latitude + ' : ' + pos.coords.longitude);
     }
     
     function writeStuff() {
     /* Show stuff on screen */
-        getConnectionType();
-        $("#log").append('<br> Quality: ' + conn);
-        getPosition();
+        var quality;
+        quality = navigator.connection.type;
+        $("#log").append('<br> Quality: ' + quality);
+        pos = navigator.geolocation.getCurrentPosition;
         $("#log").append(pos.timestamp +
             'Latitude: ' + pos.coords.latitude +
             'Longitude: ' + pos.coords.longitude +
@@ -54,8 +50,8 @@ $(function () {
     
     function startTrackStuff() {
     /* Repeat the writing function every 5 sec */
-        func_interval = window.setInterval(writeStuff, 2000);
         getPhoneInfo();
+        func_interval = window.setInterval(writeStuff, 2000);
         $("#msg").html("Tracking...");
     }
     
@@ -73,15 +69,11 @@ $(function () {
     }
     
     function checkConnection() {
-        var conn = null;
         getConnectionType();
-        notifyUser(conn);
     }
     
     function checkGeolocation() {
-        var pos = null;
         getPosition();
-        notifyUser(pos);
     }
         
     /* Listeners */
