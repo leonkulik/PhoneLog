@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.dwb.app" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Cell Phone Logger</name>
+    <name>Phone Log</name>
     <description>
-        Aplicativo de demonstração da tecnologia Phonegap. Faz um log, na tela, com os dados de seu Aparelho, posição GPS, Data e qualidade de conexão da Internet.
+        Sample Phonegap App for study. Just log ans show on screen all device data, GPS position, Timestamp and Internet Quality Connection.
     </description>
     <author email="contato@dwb.com.br" href="http://dwb.com.br">
         Leon Kulikowski
