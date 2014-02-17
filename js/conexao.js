@@ -6,7 +6,7 @@ function notificaConexao() {
     var qualidade = navigator.connection.type,
         elemento = document.getElementById('tipoconn');
     
-    elemento.innerHTML(qualidade);
+    elemento.innerHTML = 'Tipo de conexão: ' + qualidade;
     
 }
 
