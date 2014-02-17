@@ -1,60 +1,1 @@
-<?xml version='1.0' encoding='utf-8'?>
-<widget id="com.dwb.app" version="0.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Phone Log</name>
-    <description>
-        Sample Phonegap App for study. Just log and show on screen all device data, GPS position, Timestamp and Internet Quality Connection. (v0.1.1)
-    </description>
-    <author email="contato@dwb.com.br" href="http://dwb.com.br">
-        Leon Kulikowski
-    </author>
-    <access origin="*" />
-    <icon src="icon.png" />
-    <preference name="fullscreen" value="true" />
-    <preference name="webviewbounce" value="false" />
-    <!-- Connection -->
-    <feature name="NetworkStatus">
-        <param name="android-package" value="org.apache.cordova.NetworkManager" />
-        <param name="ios-package" value="CDVConnection" />
-        <param name="blackberry-package" value="org.apache.cordova.network.Network" />
-    </feature>
-    <!-- Compass -->
-    <feature name="Compass">
-        <param name="android-package" value="org.apache.cordova.CompassListener" />
-        <param name="ios-package" value="CDVLocation" />
-    </feature>
-    <!-- Accelerometer -->
-    <feature name="Accelerometer">
-        <param name="android-package" value="org.apache.cordova.AccelListener" />
-        <param name="ios-package" value="CDVAccelerometer" />
-    </feature>
-    <!-- Device -->
-    <feature name="Device">
-        <param name="android-package" value="org.apache.cordova.Device" />
-    </feature>
-    <feature id="blackberry.app" required="true" version="1.0.0.0" />
-    <Capabilities>
-        <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
-        <Capability Name="ID_CAP_IDENTITY_DEVICE" />
-        <Capability Name="ID_CAP_IDENTITY_USER" />
-    </Capabilities>
-    <!-- Notification -->
-    <feature name="Notification">
-        <param name="android-package" value="org.apache.cordova.Notification" />
-        <param name="ios-package" value="CDVNotification" />
-    </feature>
-    <!--SplashScreen-->
-    <feature name="SplashScreen">
-        <param name="android-package" value="org.apache.cordova.SplashScreen" />
-        <param name="ios-package" value="CDVSplashScreen" />
-    </feature>
-    <!--Geolocation-->
-    <feature name="Geolocation">
-        <param name="android-package" value="org.apache.cordova.GeoBroker" />
-        <param name="blackberry-package" value="org.apache.cordova.geolocation.Geolocation" />
-        <param name="ios-package" value="CDVLocation" />
-    </feature>
-    <Capabilities>
-        <Capability Name="ID_CAP_NETWORKING" />
-        <Capability Name="ID_CAP_LOCATION" />
-    </Capabilities>
-</widget>
+<?xml version="1.0" encoding="UTF-8"?>	<widget xmlns = "http://www.w3.org/ns/widgets"		xmlns:gap = "http://phonegap.com/ns/1.0"		id        = "com.dwb.phonelog"		versionCode="0.1"		version   = "0.1">		<name>Phone Log</name>		<description>Aplicativo com os principais features do Phonegap, para estudo.		</description>		<author href="http://leonkulik.com" email="leon@leonkulik.com">Leon Kulikowski		</author>		<preference name="phonegap-version" value="3.2.0" />		<preference name="orientation" value="default" />		<preference name="fullscreen" value="true" />		<preference name="target-device" value="universal" />		<preference name="webviewbounce" value="false" />		<preference name="prerendered-icon" value="true" />		<preference name="stay-in-webview" value="true" />		<preference name="ios-statusbarstyle" value="black-opaque" />		<preference name="detect-data-types" value="true" />		<preference name="exit-on-suspend" value="true" />		<preference name="show-splash-screen-spinner" value="true" />		<preference name="auto-hide-splash-screen" value="true" />		<preference name="EnableViewportScale" value="true" />		<preference name="MediaPlaybackRequiresUserAction" value="true" />		<preference name="AllowInlineMediaPlayback" value="true" />		<preference name="BackupWebStorage" value="cloud" />		<preference name="TopActivityIndicator" value="gray" />		<preference name="KeyboardDisplayRequiresUserAction" value="true" />		<preference name="HideKeyboardFormAccessoryBar" value="true" />		<preference name="SuppressesIncrementalRendering" value="true" />		<preference name="android-minSdkVersion" value="7" />		<preference name="android-installLocation" value="internalOnly" />		<preference name="SplashScreenDelay" value="5000" />		<preference name="ErrorUrl" value=""/>		<preference name="BackgroundColor" value=""/>		<preference name="KeepRunning" value="true"/>		<preference name="DisallowOverscroll" value="true"/>		<preference name="LoadingDialog" value=","/> 		<preference name="LoadUrlTimeoutValue" value="20000" />		<preference name="disable-cursor" value="true" />		<gap:platform name="ios" />		<gap:platform name="android" />		<gap:platform name="winphone" />		<feature name="http://api.phonegap.com/1.0/battery"/>		<feature name="http://api.phonegap.com/1.0/camera"/>		<feature name="http://api.phonegap.com/1.0/contacts"/>		<feature name="http://api.phonegap.com/1.0/file"/>		<feature name="http://api.phonegap.com/1.0/geolocation"/>		<feature name="http://api.phonegap.com/1.0/media"/>		<feature name="http://api.phonegap.com/1.0/network"/>		<feature name="http://api.phonegap.com/1.0/notification"/>		<feature name="http://api.phonegap.com/1.0/device"/>		<gap:plugin name="org.apache.cordova.battery-status"  />		<gap:plugin name="org.apache.cordova.camera"  />		<gap:plugin name="org.apache.cordova.console"  />		<gap:plugin name="org.apache.cordova.contacts"  />		<gap:plugin name="org.apache.cordova.device"  />		<gap:plugin name="org.apache.cordova.device-motion"  />		<gap:plugin name="org.apache.cordova.device-orientation"  />		<gap:plugin name="org.apache.cordova.dialogs"  />		<gap:plugin name="org.apache.cordova.file"  />		<gap:plugin name="org.apache.cordova.file-transfer"  />		<gap:plugin name="org.apache.cordova.geolocation"  />		<gap:plugin name="org.apache.cordova.globalization"  />		<gap:plugin name="org.apache.cordova.inappbrowser"  />		<gap:plugin name="org.apache.cordova.media"  />		<gap:plugin name="org.apache.cordova.media-capture"  />		<gap:plugin name="org.apache.cordova.network-information"  />		<gap:plugin name="org.apache.cordova.splashscreen"  />		<gap:plugin name="org.apache.cordova.vibration"  />		<access origin="*" />	</widget>
