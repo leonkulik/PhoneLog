@@ -1,28 +1,49 @@
 /*globals navigator, alert, document */
 
-var img_destino;
-    
+var pictureSource, destinationType;
 
-    
-function deviceOk() {
+function onDeviceReady() {
     'use strict';
-    img_destino = navigator.camera.DestinationType;
+    pictureSource = navigator.camera.PictureSourceType;
+    destinationType = navigator.camera.DestinationType;
 }
 
-function resultSucesso(imagem_data) {
+function onPhotoDataSuccess(imageData) {
     'use strict';
-    var mostra_img = document.getElementById("imagem");
-    mostra_img.src = "data:image/jpeg;base64," + imagem_data;
+    var smallImage = document.getElementById('smallImage');
+    smallImage.style.display = 'block';
+    smallImage.src = "data:image/jpeg;base64," + imageData;
 }
 
-function resultErro(msg) {
+function onPhotoURISuccess(imageURI) {
     'use strict';
-    alert('Erro: ' + msg);
+    var largeImage = document.getElementById('largeImage');
+    largeImage.style.display = 'block';
+    largeImage.src = imageURI;
 }
 
-function tiraFoto() {
+function onFail(message) {
     'use strict';
-    navigator.camera.getPicture(resultSucesso, resultErro, { quality: 50, destinationType: img_destino.DATA_URL });
+    alert('Failed because: ' + message);
 }
 
-document.addEventListener("deviceready", deviceOk, false);
+function capturePhoto() {
+    'use strict';
+    navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+        destinationType: destinationType.DATA_URL });
+}
+
+function capturePhotoEdit() {
+    'use strict';
+    navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
+        destinationType: destinationType.DATA_URL });
+}
+
+function getPhoto(source) {
+    'use strict';
+    navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50,
+        destinationType: destinationType.FILE_URI,
+        sourceType: source });
+}
+
+document.addEventListener("deviceready", onDeviceReady, false);
