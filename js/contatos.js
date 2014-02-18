@@ -24,7 +24,7 @@ function onError(contactError) {
 function onDeviceReady() {
     'use strict';
     var options = new ContactFindOptions();
-    options.filter = "";
+    options.filter = "leon";
     filter = ["displayName", "name"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 }

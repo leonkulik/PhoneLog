@@ -12,13 +12,13 @@ function pararBussola() {
 
 function onSuccess(heading) {
     'use strict';
-    var element = document.getElementById('direcao');
+    var element = document.getElementById('direcao2');
     element.innerHTML = 'Heading: ' + heading.magneticHeading;
 }
 
 function onError(compassError) {
     'use strict';
-    alert('Compass error: ' + compassError.code);
+    alert('Erro na bússola: ' + compassError.code);
 }
 
 function iniciarBussola() {
@@ -27,9 +27,15 @@ function iniciarBussola() {
     bussolaID = navigator.compass.watchHeading(onSuccess, onError, options);
 }
 
+function mostraBussola(heading) {
+    'use strict';
+    var elemento = document.getElementById('direcao1');
+    elemento.innerHTML = 'Heading: ' + heading.magneticHeading;
+}
+
 function onDeviceReady() {
     'use strict';
-    iniciarBussola();
+    navigator.compass.getCurrentHeading(mostraBussola, onError);
 }
 
 
