@@ -7,18 +7,24 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/jquery-2.0.3.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/app_functions.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/bussola.js"></script>
 </head>
 <body>
     <h1>Phone Log</h1>
-    <p>v1.3</p>
-    <p>Versão alterada para teste do Hydra - Teste 2</p>
     <a href="acelerometro.html" class="btn btn-primary">Acelerômetro</a>
     <a href="conexao.html" class="btn btn-primary">Conexão</a>
     <a href="geolocalizacao.html" class="btn btn-primary">Geolocalização</a>
     <a href="notificacao.html" class="btn btn-primary">Notificação</a>
     <a href="device.html" class="btn btn-primary">Device</a>
     <a href="cadastro.html" class="btn btn-primary">Cadastro</a>
-    <a href="tracking.html" class="btn btn-primary">Tracking</a>
+    <a href="camera.html" class="btn btn-primary">Camera</a>
+    <a href="bussola.html" class="btn btn-success">Bússola</a>
+    <a href="globalizacao.html" class="btn btn-primary">Globalização</a>
+    <a href="contatos.html" class="btn btn-primary">Contatos</a>
+    <hr>
+     <div id="direcao1">Posição Inicial</div>
+     <div id="direcao2">Aguardando...</div>
+    <button onclick="iniciarBussola();">Iniciar</button>
+    <button onclick="pararBussola();">Parar</button>
 </body>
 </html>
