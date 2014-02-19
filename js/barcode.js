@@ -45,7 +45,7 @@ var app = {
             "Format: " + result.format + "\n" + 
             "Cancelled: " + result.cancelled);  
 
-           console.log("Scanner result: \n" +
+           alert("Scanner result: \n" +
                 "text: " + result.text + "\n" +
                 "format: " + result.format + "\n" +
                 "cancelled: " + result.cancelled + "\n");

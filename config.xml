@@ -2,8 +2,8 @@
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		id        = "com.dwb.phonelog"
-		versionCode="1.3.1"
-		version   = "1.3">
+		versionCode="1.3.3"
+		version   = "1.3.3">
 		<name>Phone Log</name>
 		<description>
 Aplicativo com os principais features do Phonegap, para estudo.		</description>
@@ -70,6 +70,8 @@ Leon Kulikowski
 		<gap:plugin name="org.apache.cordova.network-information"  />
 		<gap:plugin name="org.apache.cordova.splashscreen"  />
 		<gap:plugin name="org.apache.cordova.vibration"  />
+		<gap:plugin name="nl.x-services.plugins.insomnia" version="3.0" />
+		<gap:plugin name="com.phonegap.plugins.barcodescanner" />
 		<icon src="img/icons_ios/Icon.png" gap:platform="ios" width="57" height="57" />
 		<icon src="img/icons_ios/Icon-72.png" gap:platform="ios" width="72" height="72" />
 		<icon src="img/icons_ios/Icon@2x.png" gap:platform="ios" width="114" height="114" />
@@ -85,6 +87,4 @@ Leon Kulikowski
 		<icon src="icon.png" />
 		<gap:splash src="splash.png" />
 		<access origin="*" />
-		<gap:plugin name="com.phonegap.plugins.barcodescanner" />
-		<gap:plugin name="nl.x-services.plugins.insomnia" />
 	</widget>
