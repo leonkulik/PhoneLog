@@ -17,7 +17,7 @@ function onDeviceReady() {
     'use strict';
     var options = new ContactFindOptions(),
         fields = ["displayName", "name"];
-    options.filter = "leon";
+    options.filter = "Leon";
     navigator.contacts.find(fields, onSuccess, onError, options);
 }
 

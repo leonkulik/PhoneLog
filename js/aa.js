@@ -1,29 +1,26 @@
-/*globals navigator, document, alert, google*/
+/*globals alert, navigator,document, ContactFindOptions*/
 
 
-function mostraMapa(position) {
+function sucesso(contacts) {
     'use strict';
-    var lat = position.coords.latitude,
-        lon = position.coords.longitude,
-        mapini = new google.maps.LatLng(lat, lon),
-        opcoes = {
-            zoom: 8,
-            center: mapini,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        },
-        map = new google.maps.Map(document.getElementById('mapa'), opcoes);
-    
+    var i = 0;
+    for (i; i < contacts.length; i += 1) {
+        alert('Nome = ' + contacts[i].name);
+    }
 }
 
 function erro() {
     'use strict';
-    alert('Erro');
-}
-    
-function sucesso() {
-    'use strict';
-    navigator.geolocation.getCurrentPosition(mostraMapa, erro);
-    
+    alert('Erro..');
 }
 
-document.addEventListener('deviceready', sucesso, false);
+function onDeviceReady() {
+    'use strict';
+    var opcoes = new ContactFindOptions(),
+        campos = ['displayName', 'name'];
+    opcoes.filter = 'Leon';
+    navigator.contacts.find(campos, sucesso, erro, opcoes);
+}
+
+
+document.addEventListener('deviceready', onDeviceReady, false);

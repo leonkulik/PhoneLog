@@ -11,7 +11,7 @@ Aplicativo com os principais features do Phonegap, para estudo.		</description>
 Leon Kulikowski
 		</author>
 		<preference name="phonegap-version" value="3.3.0" />
-		<preference name="orientation" value="portrait" />
+		<preference name="orientation" value="default" />
 		<preference name="fullscreen" value="true" />
 		<preference name="target-device" value="universal" />
 		<preference name="webviewbounce" value="true" />
