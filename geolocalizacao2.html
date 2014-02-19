@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="css/app.css">
     <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/jquery-2.0.3.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/globalization.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" charset="utf-8" src="js/geolocalizacao2.js"></script>
 </head>
 <body>
     <h1>Phone Log</h1>
@@ -16,18 +17,18 @@
     <a href="acelerometro.html" class="btn btn-primary">Acelerômetro</a>
     <a href="conexao.html" class="btn btn-primary">Conexão</a>
     <a href="geolocalizacao.html" class="btn btn-primary">Geolocalização</a>
-    <a href="geolocalizacao2.html" class="btn btn-primary">Geolocalização 2</a>
+    <a href="geolocalizacao2.html" class="btn btn-success">Geolocalização 2</a>
     <a href="notificacao.html" class="btn btn-primary">Notificação</a>
     <a href="device.html" class="btn btn-primary">Device</a>
     <a href="cadastro.html" class="btn btn-primary">Cadastro</a>
     <a href="camera.html" class="btn btn-primary">Camera</a>
     <a href="bussola.html" class="btn btn-primary">Bússola</a>
-    <a href="globalizacao.html" class="btn btn-success">Globalização</a>
+    <a href="globalizacao.html" class="btn btn-primary">Globalização</a>
     <a href="contatos.html" class="btn btn-primary">Contatos</a>
     <a href="tracking.html" class="btn btn-primary">Tracking</a>
     <a href="barcode.html" class="btn btn-primary">Barcode</a>
     <hr>
-     <button class="btn btn-warning" onclick="checkGlobal()">Ver Língua</button><br>
-     <button class="btn btn-warning" onclick="checkLocale()">Ver Local</button><br>
+    <p id="geolocation">Geolocalização</p>
+    <div id="mapa" style="width:150px; height:150px;"></div>
 </body>
 </html>

@@ -85,4 +85,6 @@ Leon Kulikowski
 		<icon src="icon.png" />
 		<gap:splash src="splash.png" />
 		<access origin="*" />
+		<gap:plugin name="com.phonegap.plugins.barcodescanner" />
+		<gap:plugin name="nl.x-services.plugins.insomnia" />
 	</widget>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/app.css">
     <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/jquery-2.0.3.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/globalization.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/contatos.js"></script>
 </head>
 <body>
     <h1>Phone Log</h1>
@@ -22,12 +22,13 @@
     <a href="cadastro.html" class="btn btn-primary">Cadastro</a>
     <a href="camera.html" class="btn btn-primary">Camera</a>
     <a href="bussola.html" class="btn btn-primary">Bússola</a>
-    <a href="globalizacao.html" class="btn btn-success">Globalização</a>
-    <a href="contatos.html" class="btn btn-primary">Contatos</a>
+    <a href="globalizacao.html" class="btn btn-primary">Globalização</a>
+    <a href="contatos.html" class="btn btn-success">Contatos</a>
     <a href="tracking.html" class="btn btn-primary">Tracking</a>
     <a href="barcode.html" class="btn btn-primary">Barcode</a>
+    <a href="insonia.html" class="btn btn-success">Insomnia</a>
     <hr>
-     <button class="btn btn-warning" onclick="checkGlobal()">Ver Língua</button><br>
-     <button class="btn btn-warning" onclick="checkLocale()">Ver Local</button><br>
+    <button onclick="window.plugins.insomnia.keepAwake()">keep awake</button>
+<button onclick="window.plugins.insomnia.allowSleepAgain()">allow sleep again</button>
 </body>
 </html>
