@@ -7,10 +7,11 @@ function onError() {
 
 function onSuccess(acceleration) {
     'use strict';
-    alert('Aceleração X: ' + acceleration.x + '\n' +
-              'Aceleração Y: ' + acceleration.y + '\n' +
-              'Aceleração Z: ' + acceleration.z + '\n' +
-              'Horário atual: ' + acceleration.timestamp + '\n');
+    var mostraDados = document.getElementById('mostradados');
+    mostraDados =   'Aceleração X: ' + acceleration.x + '<br>' +
+                    'Aceleração Y: ' + acceleration.y + '<br>' +
+                    'Aceleração Z: ' + acceleration.z + '<br>' +
+                    'Horário atual: ' + acceleration.timestamp;
 }
 
 function onDeviceReady() {

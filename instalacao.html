@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Phonelog</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/offcanvas.css" rel="stylesheet">
+    </head>
+    <body>
+    <div id="navTopo" class="navbar navbar-fixed-top navbar-inverse" role="navigation"></div>
+    <div class="container">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <div class="col-xs-12 col-sm-9">
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Menu</button>
+          </p>
+          <div class="jumbotron">
+            <h1>Instalação</h1>
+          </div>
+          <div class="row">
+            
+            <div class="col-6 col-sm-6 col-lg-4">
+              <h2>Instalação</h2>
+              <ol>
+              <li>Instalar Node - http://nodejs.org</li>
+              <li>Instalar phonegap</li>
+                <li>sudo npm install -g phonegap</li>
+                </ol>
+              
+            </div><!--/span-->
+            
+            
+            <div class="col-6 col-sm-6 col-lg-4">
+              <h2>Criar um app</h2>
+              <p>
+phonegap create PASTA com.EMPRESA.APP NOME_APP</p>
+              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div><!--/span-->
+          </div><!--/row-->
+        </div><!--/span-->
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+          
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+      <footer id="navRodape"></footer>
+    </div>
+    <script type="text/javascript" charset="utf-8" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/acelerometro.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+  </body>
+</html>
+
+
+
+<!--
+
+Adicionar plataforma
+phonegap platform add ios
+phonegap platform add android
+phonegap platform add blackberry10
+phonegap platform add firefoxos
+Cordova
+Instalar Node
+http://nodejs.org
+Instalar cordova
+sudo npm install -g cordova
+Instalar SDK’s
+iOS
+Instalar Xcode
+Participar do Apple Dev Program
+No Xcode, vai em Accounts, adiciona seu Apple ID
+Em Details, cria o Signing Identities (Distrib e Dev)
+Conecta o device, habilita para dev
+vai em windows> organizer e Add to member center
+Depois, vai em: iOS Provisioning Portal
+baixa o Provisioning Profile e, via organizer, instala ele no device
+Vai no keychain, pega a chave private, abre, exporta o certificado como p12, coloca senha, e
+depois manda para o build.phonegap
+Android
+http://developer.android.com/sdk/index.html
+Corrigir o bash
+http://shellzero.wordpress.com/2012/03/18/how-to-editchange-the-path-environment-variables-mac-os-x-
+3/
+open ~/.bash_profile
+edit .bash_profile
+source ~/.bash_profile
+Blackberry
+Instalar ANT (Android dep)
+Criar um app
+cordova create PASTA com.EMPRESA.APP NOME_APP
+Adicionar plataforma
+cordova platform add ios
+cordova platform add android
+cordova platform add blackberry10
+cordova platform add fireboxes
+Verificar plataformas
+cordova plataform ls
+ou
+cordova platforms ls
+Remover Plataforma
+cordova platform remove XXX
+ou
+cordova platform rm XXX
+Adicionando plugins:
+cordova plugin add org.apache.cordova.device
+cordova plugin add org.apache.cordova.network-information
+cordova plugin add org.apache.cordova.battery-status
+Fechando o projeto:
+cordova build
+ou ser específico:
+cordova build ios
+Emulador:
+cordova emulate android
+
+-->
