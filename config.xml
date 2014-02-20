@@ -1,1 +1,92 @@
-<?xml version="1.0" encoding="UTF-8"?>	<widget xmlns = "http://www.w3.org/ns/widgets"		xmlns:gap = "http://phonegap.com/ns/1.0"		id        = "com.dwb.phonelog"		versionCode="1.3.4"		version   = "1.3.4">		<name>Phone Log</name>		<description>Aplicativo com os principais features do Phonegap, para estudo.		</description>		<author href="http://leonkulik.com" email="leon@leonkulik.com">Leon Kulikowski		</author>		<preference name="phonegap-version" value="3.3.0" />		<preference name="orientation" value="default" />		<preference name="fullscreen" value="true" />		<preference name="target-device" value="universal" />		<preference name="webviewbounce" value="true" />		<preference name="prerendered-icon" value="true" />		<preference name="stay-in-webview" value="true" />		<preference name="ios-statusbarstyle" value="black-opaque" />		<preference name="detect-data-types" value="true" />		<preference name="exit-on-suspend" value="true" />		<preference name="show-splash-screen-spinner" value="true" />		<preference name="auto-hide-splash-screen" value="true" />		<preference name="EnableViewportScale" value="true" />		<preference name="MediaPlaybackRequiresUserAction" value="true" />		<preference name="AllowInlineMediaPlayback" value="true" />		<preference name="BackupWebStorage" value="cloud" />		<preference name="TopActivityIndicator" value="gray" />		<preference name="KeyboardDisplayRequiresUserAction" value="true" />		<preference name="HideKeyboardFormAccessoryBar" value="true" />		<preference name="SuppressesIncrementalRendering" value="true" />		<preference name="android-minSdkVersion" value="7" />		<preference name="android-installLocation" value="internalOnly" />		<preference name="SplashScreenDelay" value="5000" />		<preference name="ErrorUrl" value=""/>		<preference name="BackgroundColor" value=""/>		<preference name="KeepRunning" value="true"/>		<preference name="DisallowOverscroll" value="true"/>		<preference name="LoadingDialog" value=","/> 		<preference name="LoadUrlTimeoutValue" value="20000" />		<preference name="disable-cursor" value="true" />		<gap:platform name="ios" />		<gap:platform name="android" />		<gap:platform name="winphone" />		<feature name="http://api.phonegap.com/1.0/battery"/>		<feature name="http://api.phonegap.com/1.0/camera"/>		<feature name="http://api.phonegap.com/1.0/contacts"/>		<feature name="http://api.phonegap.com/1.0/file"/>		<feature name="http://api.phonegap.com/1.0/geolocation"/>		<feature name="http://api.phonegap.com/1.0/media"/>		<feature name="http://api.phonegap.com/1.0/network"/>		<feature name="http://api.phonegap.com/1.0/notification"/>		<feature name="http://api.phonegap.com/1.0/device"/>		<gap:plugin name="org.apache.cordova.battery-status"  />		<gap:plugin name="org.apache.cordova.camera"  />		<gap:plugin name="org.apache.cordova.console"  />		<gap:plugin name="org.apache.cordova.contacts"  />		<gap:plugin name="org.apache.cordova.device"  />		<gap:plugin name="org.apache.cordova.device-motion"  />		<gap:plugin name="org.apache.cordova.device-orientation"  />		<gap:plugin name="org.apache.cordova.dialogs"  />		<gap:plugin name="org.apache.cordova.file"  />		<gap:plugin name="org.apache.cordova.file-transfer"  />		<gap:plugin name="org.apache.cordova.geolocation"  />		<gap:plugin name="org.apache.cordova.globalization"  />		<gap:plugin name="org.apache.cordova.inappbrowser"  />		<gap:plugin name="org.apache.cordova.media"  />		<gap:plugin name="org.apache.cordova.media-capture"  />		<gap:plugin name="org.apache.cordova.network-information"  />		<gap:plugin name="org.apache.cordova.splashscreen"  />		<gap:plugin name="org.apache.cordova.vibration"  />		<icon src="img/icons_ios/Icon.png" gap:platform="ios" width="57" height="57" />		<icon src="img/icons_ios/Icon-72.png" gap:platform="ios" width="72" height="72" />		<icon src="img/icons_ios/Icon@2x.png" gap:platform="ios" width="114" height="114" />		<icon src="img/icons_ios/Icon-72@2x.png" gap:platform="ios" width="144" height="144" />		<icon src="img/icons_ios7/Icon-76.png" gap:platform="ios" width="76" height="76" />		<icon src="img/icons_ios7/Icon-60@2x.png" gap:platform="ios" width="120" height="120" />		<icon src="img/icons_ios7/Icon-76@2x.png" gap:platform="ios" width="152" height="152" />		<icon src="img/android/ic_launcher.png" gap:platform="android" gap:density="ldpi" />		<icon src="img/android/m_ic_launcher.png" gap:platform="android" gap:density="mdpi" />		<icon src="img/android/h_ic_launcher.png" gap:platform="android" gap:density="hdpi" />		<icon src="img/android/x_ic_launcher.png" gap:platform="android" gap:density="xhdpi" />		<icon src="img/android/xh_ic_launcher.png" gap:platform="android" gap:density="xxhdpi" />		<icon src="icon.png" />		<gap:splash src="splash.png" />		<access origin="*" />		<gap:plugin name="com.phonegap.plugins.barcodescanner" />		<gap:plugin name="nl.x-services.plugins.insomnia"  version="3.0" />	</widget>
+<?xml version="1.0" encoding="UTF-8"?>
+	<widget xmlns = "http://www.w3.org/ns/widgets"
+		xmlns:gap = "http://phonegap.com/ns/1.0"
+		id        = "com.dwb.phonelog"
+		versionCode="1.3.4"
+		version   = "1.3.4">
+		<name>Phone Log</name>
+		<description>
+Aplicativo com os principais features do Phonegap, para estudo.		</description>
+		<author href="http://leonkulik.com" email="leon@leonkulik.com">
+Leon Kulikowski
+		</author>
+		<preference name="phonegap-version" value="3.3.0" />
+		<preference name="orientation" value="default" />
+		<preference name="fullscreen" value="true" />
+		<preference name="target-device" value="universal" />
+		<preference name="webviewbounce" value="true" />
+		<preference name="prerendered-icon" value="true" />
+		<preference name="stay-in-webview" value="true" />
+		<preference name="ios-statusbarstyle" value="black-opaque" />
+		<preference name="detect-data-types" value="true" />
+		<preference name="exit-on-suspend" value="true" />
+		<preference name="show-splash-screen-spinner" value="true" />
+		<preference name="auto-hide-splash-screen" value="true" />
+		<preference name="EnableViewportScale" value="true" />
+		<preference name="MediaPlaybackRequiresUserAction" value="true" />
+		<preference name="AllowInlineMediaPlayback" value="true" />
+		<preference name="BackupWebStorage" value="cloud" />
+		<preference name="TopActivityIndicator" value="gray" />
+		<preference name="KeyboardDisplayRequiresUserAction" value="true" />
+		<preference name="HideKeyboardFormAccessoryBar" value="true" />
+		<preference name="SuppressesIncrementalRendering" value="true" />
+		<preference name="android-minSdkVersion" value="7" />
+		<preference name="android-installLocation" value="internalOnly" />
+		<preference name="SplashScreenDelay" value="5000" />
+		<preference name="ErrorUrl" value=""/>
+		<preference name="BackgroundColor" value=""/>
+		<preference name="KeepRunning" value="true"/>
+		<preference name="DisallowOverscroll" value="true"/>
+		<preference name="LoadingDialog" value=","/> 
+		<preference name="LoadUrlTimeoutValue" value="20000" />
+		<preference name="disable-cursor" value="true" />
+		<gap:platform name="ios" />
+		<gap:platform name="android" />
+		<gap:platform name="winphone" />
+		<feature name="http://api.phonegap.com/1.0/battery"/>
+		<feature name="http://api.phonegap.com/1.0/camera"/>
+		<feature name="http://api.phonegap.com/1.0/contacts"/>
+		<feature name="http://api.phonegap.com/1.0/file"/>
+		<feature name="http://api.phonegap.com/1.0/geolocation"/>
+		<feature name="http://api.phonegap.com/1.0/media"/>
+		<feature name="http://api.phonegap.com/1.0/network"/>
+		<feature name="http://api.phonegap.com/1.0/notification"/>
+		<feature name="http://api.phonegap.com/1.0/device"/>
+		<gap:plugin name="org.apache.cordova.battery-status"  />
+		<gap:plugin name="org.apache.cordova.camera"  />
+		<gap:plugin name="org.apache.cordova.console"  />
+		<gap:plugin name="org.apache.cordova.contacts"  />
+		<gap:plugin name="org.apache.cordova.device"  />
+		<gap:plugin name="org.apache.cordova.device-motion"  />
+		<gap:plugin name="org.apache.cordova.device-orientation"  />
+		<gap:plugin name="org.apache.cordova.dialogs"  />
+		<gap:plugin name="org.apache.cordova.file"  />
+		<gap:plugin name="org.apache.cordova.file-transfer"  />
+		<gap:plugin name="org.apache.cordova.geolocation"  />
+		<gap:plugin name="org.apache.cordova.globalization"  />
+		<gap:plugin name="org.apache.cordova.inappbrowser"  />
+		<gap:plugin name="org.apache.cordova.media"  />
+		<gap:plugin name="org.apache.cordova.media-capture"  />
+		<gap:plugin name="org.apache.cordova.network-information"  />
+		<gap:plugin name="org.apache.cordova.splashscreen"  />
+		<gap:plugin name="org.apache.cordova.vibration"  />
+		<icon src="img/icons_ios/Icon.png" gap:platform="ios" width="57" height="57" />
+		<icon src="img/icons_ios/Icon-72.png" gap:platform="ios" width="72" height="72" />
+		<icon src="img/icons_ios/Icon@2x.png" gap:platform="ios" width="114" height="114" />
+		<icon src="img/icons_ios/Icon-72@2x.png" gap:platform="ios" width="144" height="144" />
+		<icon src="img/icons_ios7/Icon-76.png" gap:platform="ios" width="76" height="76" />
+		<icon src="img/icons_ios7/Icon-60@2x.png" gap:platform="ios" width="120" height="120" />
+		<icon src="img/icons_ios7/Icon-76@2x.png" gap:platform="ios" width="152" height="152" />
+		<icon src="img/android/ic_launcher.png" gap:platform="android" gap:density="ldpi" />
+		<icon src="img/android/m_ic_launcher.png" gap:platform="android" gap:density="mdpi" />
+		<icon src="img/android/h_ic_launcher.png" gap:platform="android" gap:density="hdpi" />
+		<icon src="img/android/x_ic_launcher.png" gap:platform="android" gap:density="xhdpi" />
+		<icon src="img/android/xh_ic_launcher.png" gap:platform="android" gap:density="xxhdpi" />
+		<icon src="icon.png" />
+		<gap:splash src="splash.png" />
+		<access origin="*" />
+<!--
+		<gap:plugin name="com.phonegap.plugins.barcodescanner" />
+		<gap:plugin name="nl.x-services.plugins.insomnia"  version="3.0" />
+-->
+	</widget>

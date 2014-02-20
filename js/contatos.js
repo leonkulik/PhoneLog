@@ -4,7 +4,7 @@ function onSuccess(contacts) {
     'use strict';
     var i = 0;
     for (i; i < contacts.length; i++) {
-        alert("Nome = " + contacts[i].displayName);
+        alert("Nome = " + contacts[i].name);
     }
 }
 
