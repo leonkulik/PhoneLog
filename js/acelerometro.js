@@ -7,8 +7,8 @@ function onError() {
 
 function onSuccess(acceleration) {
     'use strict';
-    var mostraDados = document.getElementById('mostradados');
-    mostraDados =   'Aceleração X: ' + acceleration.x + '<br>' +
+    var mostradados = document.getElementById('mostradados');
+    mostradados =   'Aceleração X: ' + acceleration.x + '<br>' +
                     'Aceleração Y: ' + acceleration.y + '<br>' +
                     'Aceleração Z: ' + acceleration.z + '<br>' +
                     'Horário atual: ' + acceleration.timestamp;
